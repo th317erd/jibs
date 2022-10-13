@@ -1,0 +1,25 @@
+{
+  "name": "jibs2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index",
+  "type": "commonjs",
+  "scripts": {
+    "coverage": "clear ; node ./node_modules/.bin/nyc ./node_modules/.bin/jasmine",
+    "test": "node ./node_modules/.bin/jasmine",
+    "test-watch": "watch 'clear ; node ./node_modules/.bin/jasmine' . --wait=2 --interval=1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@spothero/eslint-plugin-spothero": "github:spothero/eslint-plugin-spothero",
+    "eslint": "^8.24.0",
+    "jasmine": "^4.4.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "deadbeef": "^1.1.0",
+    "events": "^3.3.0"
+  }
+}
