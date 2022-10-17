@@ -1,15 +1,18 @@
-```javascript
-$(ARRAY)(
-  $(OBJECT)(
-    $(KEY)(
-      'test',
-      $(BOOLEAN)(true),
-    ),
-  )
-)
+# Jibs
 
-function jib(renderer, parent, def, _node) {
-  let { Type, props, children } = def;
-  let node = (_node) ? _node : renderer.createNode(parent, Type, props, children);
-}
-```
+Jibs is a VDOM rendering engine. It was designed to be used in any context, though its use in the browser is obvious. It is an engine that renders output using "jibs" as input. Jibs are structured data built by function chains and calls. This living data structure is then piped through rendering engines to result in output.
+
+Though it was designed with HTML Elements in mind, and can render any output, including JSON structures, XML, SVG, and HTML documents, and really any structured data. It could also be used for unstructured data with the correct renderer.
+
+Though it is "React"ish in nature, it isn't React. Unlike React, `jibs` is lower-level, and quite a bit different in many ways. Jibs tries to take the best ideas from frameworks like React, Vue, and Angular, while staying away from the 💩.
+
+Here are some differences for comparison:
+
+  1. `jibs` asks that you avoid use of inline `styles`, and instead stick with classes and a separate CSS system. For this reason it has much better support for the `class` attribute than other frameworks.
+  2. Unlike most other major frameworks, `jibs` isn't your gatekeeper, and won't tell you how to live your life. You code how you wish to code, and if you code yourself into a corner, or cause a bug that takes your team dozens of man hours to resolve, well then, I guess you have ended up learning something, eh?
+  3. `jibs` doesn't hijack the native event system and replace it with some unmanageable and broken synthetic event system. When you bind to an event with a property, such as `onClick`, you are actually binding to the event using the native event system, and can even set native props on events, such as the `passive` prop now supported across many browsers.
+  4. `jibs` embraces the legacy of the web, and its history. This means that we won't start telling our users stupid things like "You should always use inline styles, simply because I felt that might be a good idea when I woke up this morning", or "Object Oriented Programming and polymorphism are super bad things because I some some drunk college kid that couldn't understand them", or "We should toss separation of DOM from presentation because I wasn't part of that decision years ago, and obviously only the decisions I make while sleeping are the correct and right decisions". Nope, `jibs` doesn't buy into any of that. OOP is super useful, polymorphism is a must unless you like Assembly Language, and DOM absolutely _should_ be separated from presentation for a good reason. Also, certain elements serve a purpose, and should be properly used, and this is important for things like accessibility. In short, `jibs` doesn't pretend that the history of thousands of developers across decades of time making good decisions is suddenly somehow moot and broken.
+  5. `jibs` isn't bloated to the state of shaming black holes, and relies on basic web technologies that have been developed over the decades, such as fetching resources natively in the browser, in many small easily cachable chunks. `jibs` itself is super small, and is written such that the developer need not have a multi-gigabyte complex transpiling toolchain. Simply start writing your javascript application, and away you go.
+  6. `jibs` natively provides a lightning fast and sensical context system to provide data to all components on the VDOM tree.
+  7. `jibs` state system is not confusing, nor are there any hidden secrets, nor domain knowledge that are required to avoid bugs. Simply define a state, use a state, and update the state. Have fun writing your application!
+  8. `jibs` supports deep component customization, custom rendering engines, useful utilities built-in, and everything a user should need to simply start creating your next dream application.

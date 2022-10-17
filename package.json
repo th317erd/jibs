@@ -1,5 +1,5 @@
 {
-  "name": "jibs2",
+  "name": "jibs",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index",
@@ -9,8 +9,15 @@
     "test": "node ./node_modules/.bin/jasmine",
     "test-watch": "watch 'clear ; node ./node_modules/.bin/jasmine' . --wait=2 --interval=1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vdom",
+    "html",
+    "spa",
+    "react",
+    "vue",
+    "angular"
+  ],
+  "author": "Wyatt Greenway",
   "license": "MIT",
   "devDependencies": {
     "@spothero/eslint-plugin-spothero": "github:spothero/eslint-plugin-spothero",
@@ -19,7 +26,7 @@
     "nyc": "^15.1.0"
   },
   "dependencies": {
-    "deadbeef": "^1.1.0",
+    "deadbeef": "^1.1.1",
     "events": "^3.3.0"
   }
 }
