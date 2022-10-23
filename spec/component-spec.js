@@ -4,7 +4,7 @@
 
 /* global describe, expect, it, beforeEach */
 
-const { Component } = require('../lib/component');
+import { Component } from '../lib/component.js';
 
 describe('Component', () => {
   let component;

@@ -2,12 +2,14 @@
   "name": "jibs",
   "version": "1.0.0",
   "description": "",
-  "main": "./lib/index",
-  "type": "commonjs",
+  "main": "./lib/index.js",
+  "browser": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "coverage": "clear ; node ./node_modules/.bin/nyc ./node_modules/.bin/jasmine",
     "test": "node ./node_modules/.bin/jasmine",
-    "test-watch": "watch 'clear ; node ./node_modules/.bin/jasmine' . --wait=2 --interval=1"
+    "test-watch": "watch 'clear ; node ./node_modules/.bin/jasmine' . --wait=2 --interval=1",
+    "build": "./node_modules/.bin/webpack"
   },
   "keywords": [
     "vdom",
@@ -21,9 +23,12 @@
   "license": "MIT",
   "devDependencies": {
     "@spothero/eslint-plugin-spothero": "github:spothero/eslint-plugin-spothero",
+    "@webpack-cli/generators": "^2.5.0",
     "eslint": "^8.24.0",
     "jasmine": "^4.4.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
   "dependencies": {
     "deadbeef": "^1.1.1",

@@ -4,7 +4,7 @@
 
 /* global describe, expect, it */
 
-const Utils = require('../lib/utils');
+import * as Utils from '../lib/utils.js';
 
 describe('Utils', () => {
   describe('propsDiffer', () => {
