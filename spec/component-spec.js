@@ -1,7 +1,5 @@
 /* eslint-disable no-magic-numbers */
 
-'use strict';
-
 /* global describe, expect, it, beforeEach */
 
 import { Component } from '../lib/component.js';

@@ -1,7 +1,5 @@
 /* eslint-disable no-magic-numbers */
 
-'use strict';
-
 /* global describe, expect, it */
 
 import * as Utils from '../lib/utils.js';

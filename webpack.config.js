@@ -1,12 +1,14 @@
 /* global process */
 
 import Path from 'node:path';
+import TerserPlugin from 'terser-webpack-plugin';
 
-const isProduction = (process.env.NODE_ENV === 'production');
+const isProduction = true;//(process.env.NODE_ENV === 'production');
 
 const config = {
   entry:    './lib/index.js',
   devtool:  'source-map',
+  mode:     'production',
   output:   {
     path:               Path.resolve('./dist'),
     scriptType:         'module',
@@ -22,6 +24,19 @@ const config = {
   },
   experiments: {
     outputModule: true,
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        parallel:       true,
+        terserOptions:  {
+          keep_classnames:  true,
+          keep_fnames:      true,
+          ecma:             2015,
+          module:           true,
+        },
+      }),
+    ],
   },
 };
 
