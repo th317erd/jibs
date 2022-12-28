@@ -24,15 +24,14 @@
   "devDependencies": {
     "@spothero/eslint-plugin-spothero": "github:spothero/eslint-plugin-spothero",
     "@webpack-cli/generators": "^2.5.0",
-    "eslint": "^8.24.0",
-    "jasmine": "^4.4.0",
+    "eslint": "^8.27.0",
+    "jasmine": "^4.5.0",
     "nyc": "^15.1.0",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "deadbeef": "^1.1.1",
-    "events": "^3.3.0"
+    "deadbeef": "^1.1.1"
   }
 }
