@@ -1,4 +1,4 @@
 spec/**
 .vscode/**
-.eslintrc.js
+.eslintrc.cjs
 webpack.config.js
