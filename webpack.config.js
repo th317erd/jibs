@@ -3,11 +3,11 @@
 import Path from 'node:path';
 import TerserPlugin from 'terser-webpack-plugin';
 
-const isProduction = true;//(process.env.NODE_ENV === 'production');
+const isProduction = (process.env.NODE_ENV === 'production');
 
 const config = {
   entry:    './lib/index.js',
-  devtool:  'source-map',
+  devtool:  (isProduction) ? 'source-map' : 'inline-source-map',
   mode:     'production',
   output:   {
     path:               Path.resolve('./dist'),

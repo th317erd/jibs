@@ -9,7 +9,8 @@
     "coverage": "clear ; node ./node_modules/.bin/nyc ./node_modules/.bin/jasmine",
     "test": "node ./node_modules/.bin/jasmine",
     "test-watch": "watch 'clear ; node ./node_modules/.bin/jasmine' . --wait=2 --interval=1",
-    "build": "./node_modules/.bin/webpack"
+    "build": "./node_modules/.bin/webpack",
+    "prepublishOnly": "NODE_ENV=production ./node_modules/.bin/webpack"
   },
   "keywords": [
     "vdom",
